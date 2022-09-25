@@ -1,0 +1,393 @@
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 900;
+    src: url("font/Gilroy-Bold.otf")
+}
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 200;
+    src: url("font/Gilroy-Light.otf")
+}
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 500;
+    src: url("font/Gilroy-Medium.otf")
+}
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 700;
+    src: url("font/Gilroy-Regular.otf")
+}
+@font-face{
+    font-family: "Xhers";
+    font-weight: 400;
+    src: url("font/Xhers\ Regular.otf");
+}
+@font-face{
+    font-family: "Xhers";
+    font-weight: 400;
+    src: url("font/Xhers\ Regular-Italic.otf");
+}
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #151518;
+    z-index: 999999;
+    cursor: none;
+}
+#bubble{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #dadada6d;
+}
+#bubble1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #dadada;
+}
+
+
+#cursor {
+    border: 1px solid black;
+    position: fixed;
+    display: none;
+    z-index: 222;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-out;
+    height: 140px;
+    width: 140px;
+}
+
+#cursor #wheel {
+    height: 100%;
+    width: 100%;
+    animation: animate 5s linear infinite both;
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #dadada;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#arrow svg{
+    height: 45%;
+    width: 45%;
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #f8f8f8ff;
+    min-height: 100vh;
+}
+
+#smcircle {
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-out;
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#ming {
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+#band {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+#logo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    margin-top: -50px;
+    margin-right: 40px;
+    background-color: transparent;
+    transition: transform 1s ease-in-out;
+}
+
+i {
+    font-size: 25px;
+}
+
+#logo1:hover {
+    transform: rotate(180deg);
+}
+
+
+#cont {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#cont1 {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#cont #h1 {
+    font-size: 180px;
+    text-transform: uppercase;
+    font-family: Xhers Regular;
+    line-height: 140px;
+}
+
+#cont1 #h2 {
+    font-size: 180px;
+    text-transform: uppercase;
+    font-family: Xhers Regular;
+    line-height: 140px;
+}
+#cont1 #h3{
+    position: absolute;
+    font-size: 40px;
+    top: 300px;
+    left: 52%;
+}
+p {
+    font-size: 8px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    opacity: 1;
+    position: absolute;
+    right: 5%;
+    text-transform: uppercase;
+    font-family: sans-serif;
+
+}
+
+#works {
+    display: flex;
+    justify-content: right;
+    margin-top: 200px;
+    /* margin-bottom: 80px; */
+    width: 100%;
+    padding: 0 80px;
+    overflow: hidden;
+}
+
+#works .work {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    z-index: 99999;
+}
+
+#works:nth-child(2n) {
+    justify-content: flex-start;
+}
+
+#img .bg-img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+#img .bg-img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+#text h3 {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: rgb(58, 57, 57);
+}
+
+#text h5 {
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: rgb(98, 97, 97);
+
+}
+
+#conts {
+    margin-top: 150px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+#conts h2 {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: Xhers Regular;
+}
+
+#mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 60px;
+    padding: 0 40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all .5s ease-out;
+}
+#mail  h4 {
+    font-size: 8px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: .3px;
+}
+#mail #fxt {
+    font-size: 10px;
+    color: white;
+    font-family: sans-serif;
+}
+
+#bxt1 {
+    margin-top: 140px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+#bxt1 h2 {
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-bottom: 10px;
+    font-family: Gilroy;
+    letter-spacing: .3px;
+    font-weight: 300;
+    text-decoration: underline 1px solid black;
+}
+
+#bxt1 h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: Gilroy;
+    font-weight: 400;
+    color: black;
+    opacity: .9;
+    text-decoration: underline 2px solid black;
+}
+
+#fndv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 22%;
+    height: 30px;
+    margin-top: -40px;
+    margin-left: 1180px;
+}
+
+#fndv h5 {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: .7;
+    color: black;
+}
+
+#final {
+    width: 100%;
+    height: 20px;
+}
+
+
+@media (max-width:472px) {
+    #ming{
+        margin-left: 20px;
+    }
+    #cont #h1{
+        font-size: 60px;
+        text-transform: uppercase;
+        font-family: Xhers Regular;
+        line-height: 30px;
+        margin-left: -20px;
+    }
+    #cont1 #h2{
+        font-size: 60px;
+        text-transform: uppercase;
+        font-family: Xhers Regular;
+        line-height: 30px;
+        margin-left: -20px;
+    }
+    #cont1 #h3{
+        position: absolute;
+        font-size: 40px;
+        top: 170px;
+        left: 90%;
+    }
+    #conts h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-family: Xhers Regular;
+    }
+
+}
