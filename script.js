@@ -42,19 +42,19 @@ window.addEventListener("mousemove", function(dets){
 
 document.querySelectorAll(".enlarge").forEach(function(elem){
     elem.addEventListener("mousemove", function(){
-            document.querySelector("#smcircle").style.width = "80px";
-            document.querySelector("#smcircle").style.height = "80px";
-            document.querySelector("#smcircle").style.backgroundColor = "white";
-            document.querySelector("#smcircle").style.mixBlendMode = "difference";
+        document.querySelector("#smcircle").style.width = "80px";
+        document.querySelector("#smcircle").style.height = "80px";
+        document.querySelector("#smcircle").style.backgroundColor = "white";
+        document.querySelector("#smcircle").style.mixBlendMode = "difference";
     })
 })
 
 document.querySelectorAll(".enlarge").forEach(function(elem){
     elem.addEventListener("mouseleave", function(){
-            document.querySelector("#smcircle").style.width = "15px";
-            document.querySelector("#smcircle").style.height = "15px";
-            document.querySelector("#smcircle").style.backgroundColor = "transparent";
-            document.querySelector("#smcircle").style.mixBlendMode = "initial";
+        document.querySelector("#smcircle").style.width = "15px";
+        document.querySelector("#smcircle").style.height = "15px";
+        document.querySelector("#smcircle").style.backgroundColor = "transparent";
+        document.querySelector("#smcircle").style.mixBlendMode = "initial";
     })
 })
 
